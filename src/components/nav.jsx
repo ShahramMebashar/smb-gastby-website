@@ -83,7 +83,7 @@ class Navbar extends Component {
                 <Icon size="xs">
                   <img src={PhoneSvgIcon} alt="" />
                 </Icon>
-                +964-751 4104314 (EN)
+                +964 (0) 750 076 9538 (EN)
               </div>
             </div>
             <HumbergerMenu
