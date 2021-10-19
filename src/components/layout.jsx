@@ -44,8 +44,8 @@ const description =
       ],
     },
     {
-      title: 'HSE',
-      to: 'services/hse',
+      title: 'Medical',
+      to: '/medical',
       hasDropdown: false,
     },
     {

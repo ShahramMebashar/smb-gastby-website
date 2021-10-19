@@ -3,6 +3,7 @@ import Header from '../components/header'
 import Container from '../components/layouts/container'
 import Layout from '../components/layout'
 import Services from '../components/home-services'
+import Partners from '../components/home-partners'
 import Headline from '../components/common/headline'
 import HighlightRow from '../components/common/highlightRow'
 import '../components/common/TextCenter'
@@ -53,6 +54,11 @@ const IndexPage = props => (
           </div>
         </Container>
       </HighlightRow>
+
+      <Container>
+        <Headline styledText="Our">Partners</Headline>
+        <Partners images={props.data} />
+      </Container>
     </main>
   </Layout>
 )
@@ -138,6 +144,55 @@ export const pageQuery = graphql`
           originalName
         }
       }
-    }
+    },
+
+    medicalPartners: file(relativePath: { eq: "medical-partners.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+          originalImg
+          originalName
+        }
+      }
+    },
+
+    govPartners: file(relativePath: { eq: "gov-partners.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+          originalImg
+          originalName
+        }
+      }
+    },
+
+    oilPartners: file(relativePath: { eq: "oil-partners.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+          originalImg
+          originalName
+        }
+      }
+    },
+
   }
 `
